@@ -1,0 +1,53 @@
+1.SQL> CREATE TABLE Employee2 (
+  2      EmployeeID INT PRIMARY KEY,
+  3      FirstName VARCHAR(50),
+  4      LastName VARCHAR(50),
+  5      Department VARCHAR(50),
+  6      Salary DECIMAL(10, 2)
+  7  );
+create departement table
+
+2.CREATE TABLE Departments1 (
+    DepartmentID INT PRIMARY KEY ,
+    DepartmentName VARCHAR(100) NOT NULL
+);
+Table created.
+3.CREATE TABLE Employees3 (
+    DepartmentID INT,
+    FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID),
+departmentname ,
+       
+);
+4.CREATE TABLE Employees112 (
+   EmployeeID INT PRIMARY KEY ,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) NOT NULL,
+    HireDate DATE,
+    DepartmentID INT,
+    FOREIGN KEY (DepartmentID) REFERENCES Departments1(DepartmentID));
+
+ 5.CREATE TABLE Employees112 (
+  2      EmployeeID INT PRIMARY KEY ,
+  3      FirstName VARCHAR(50) NOT NULL,
+  4      LastName VARCHAR(50) NOT NULL,
+  5      Email VARCHAR(100) NOT NULL,
+  6      HireDate DATE,
+  7      DepartmentID INT,
+  8      FOREIGN KEY (DepartmentID) REFERENCES Departments1(DepartmentID));
+
+Table created.
+6.CREATE TABLE Departments113 (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(100) NOT NULL,
+    DepartmentLocation VARCHAR(100)
+);Table created.
+
+ALTER TABLE Employees113(
+ADD PhoneNumber VARCHAR(15));
+7.insert into multipule records into department table
+insert into departement1 (departmentid,departmentname)
+values(2,'aids');
+8.update the salary of employees by 1000
+UPDATE Employees112
+SET Salary = Salary + 1000;
